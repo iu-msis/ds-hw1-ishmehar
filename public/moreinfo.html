@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+    <title>Bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/hw1.css">
+  <script>
+function relocate_home()
+{
+     location.href = "monthlysalesreport.html";
+}
+    </script>
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+  <header>
+
+<div class="jumbotron pad">
+  <h1>Tom Jensen</h1>
+  <p>This assignment was part of my D&S module that I am currently taking.
+     It has all the information about me that you could possibly be interested in!</p>
+</div>
+
+     </header>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">This page tells you all about me!</a>
+</div>
+<ul class="nav navbar-nav">
+<li class="active"><a href="index.html">Index</a></li>
+<li><a href="aboutme.html">About me</a></li>
+<li><a href="moreinfo.html">More information</a></li>
+
+</ul>
+</div>
+</nav>
+
+
+    <main>
+
+
+        <div class="container">
+            <h1>Places I'd like to visit</h1>
+    <table  class="table table-bordered table-hover table-condensed">
+
+
+     <thead>
+        <tr>
+        <th>COUNTRY</th>
+        <th>PREFERENCE (Highest: 1)</th>
+        <th>BUDGET</th>
+        <th>TENTATIVE DATE</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+        <td>IRELAND</td>
+        <td>1</td>
+        <td>$5000</td>
+        <td>04/12/2018</td>
+
+        </tr>
+
+          <tr>
+       <td>ROME</td>
+        <td>2</td>
+        <td>$6000</td>
+        <td>05/12/2018</td>
+        </tr>
+
+          <tr>
+       <td>CZECH REPLUBLIC</td>
+        <td>3</td>
+        <td>$4000</td>
+        <td>06/12/2018</td>
+        </tr>
+
+          <tr>
+        <td>AUSTRALIA</td>
+        <td>4</td>
+        <td>$7000</td>
+        <td>06/12/2018</td>
+        </tr>
+
+          <tr>
+        <td>FRANCE</td>
+        <td>5</td>
+        <td>$8000</td>
+        <td>07/12/2018</td>
+        </tr>
+
+
+
+        <tr  id="total">
+            <td>BUDGET GRAND TOTAL</td>
+            <td colspan="6">$30,000</td>
+        </tr>
+
+     </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="7" align="center">This table mentions all the countries that I'd like to visit before I turn 25.</td>
+        </tr>
+
+    </tfoot>
+    </table>
+        </div>
+    <br>
+<!--
+
+    <h1>Would you like to connect with me? Fill up the form and I will contact you!</h1>
+-->
+
+
+
+<div class="container">
+  <h2>Would you like to connect with me? Fill up the form and I will contact you!</h2>
+  <form action="index.html">
+       <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+
+         <div class="form-group">
+      <label for="number">Contact Number:</label>
+      <input type="number" class="form-control" id="number" placeholder="Enter number" name="number">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country to visit:</label>
+      <input type="country" class="form-control" id="country" placeholder="Enter country" name="country">
+    </div>
+
+    <div class="form-group">
+      <label for="budget">Budget:</label>
+      <input type="budget" class="form-control" id="budget" placeholder="Enter budget" name="budget">
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" class="form-control" id="date" placeholder="Enter date" name="date">
+    </div>
+
+    <div class="checkbox">
+      <label><input type="checkbox" name="contact?">Would you like me to contact you by contact number?</label>
+    </div>
+      <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-th-list" action=""></span> Submit</button>
+  </form>
+</div>
+
+<br><br><br>
+    </main>
+
+
+
+</body>
+
+<footer>
+D&S Assignment 1- MSIS Program- Kelley School of Business- Indiana University - All rights reserved
+</footer>
+
+</html>
