@@ -1,0 +1,72 @@
+.navbar .nav > li {
+float:none;
+display:inline-block;
+*display:inline;
+*zoom:1;
+vertical-align: top;
+}
+
+.container{
+
+width: 100%;
+}
+
+footer{
+    text-align: center;
+    border: 2px grey solid;
+    width: 100%;
+}
+
+
+
+.img-rounded{
+  border-radius: 60px;
+}
+
+.pad{
+  padding: 20px;
+
+}
+
+body{
+  padding: 20px;
+  background-color:#b8b0b0;
+
+}
+
+/* moreinfo */
+
+        form {
+            width: 100%;
+              padding: 50px;
+
+        }
+
+        thead{
+
+        max-width: 10px;
+         background-color: cadetblue;
+            color: white;
+        }
+
+
+
+       .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #9cbaba;
+}
+
+        #total{
+
+            background-color: grey;
+            font-weight: bold;
+        }
+
+        .btn{
+
+            margin: 20px;
+            background-color: cadetblue;
+        }
+
+        ul.nav li a, ul.nav li a:visited {
+            color: cadetblue;
+        }
