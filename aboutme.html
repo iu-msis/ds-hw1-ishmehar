@@ -13,23 +13,45 @@
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="css/hw1.css">
+  <link rel="stylesheet" href="ridgeway.css">
 
     <style>
 
+        .navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align: top;
+}
 
+.container{
+
+  width: 100%;
+}
+
+        footer{
+            text-align: center;
+            border: 2px grey solid;
+        }
+
+        #1{
+
+            background-color: azure;
+        }
     </style>
 
 </head>
 <body>
 
     <header>
-
-  <div class="jumbotron pad">
-    <h1>Tom Jensen</h1>
+      <div class="container" id="1">
+  <div class="jumbotron">
+    <h1>Ishmehar Chawla</h1>
     <p>This assignment was part of my D&S module that I am currently taking.
        It has all the information about me that you could possibly be interested in!</p>
   </div>
+</div>
 
        </header>
 
@@ -39,9 +61,9 @@
   <a class="navbar-brand" href="#">This page tells you all about me!</a>
 </div>
 <ul class="nav navbar-nav">
-  <li class="active"><a href="index.html">Index</a></li>
-  <li><a href="aboutme.html">About me</a></li>
-  <li><a href="moreinfo.html">More information</a></li>
+  <li class="active"><a href="#">Index</a></li>
+  <li><a href="#">About me</a></li>
+  <li><a href="#">More information</a></li>
 
 </ul>
 </div>
@@ -50,22 +72,23 @@
 
     <main>
 
-   <h1 class="pad">I am interesting, I promise!</h1>
-   <div class="row">
-     <a href="img/1.gif"><img class="col-md-6 img-circle pad" src="img/1.gif" width="400" height="400" alt="Index page" alt="Cinque Terre""></a>
+   <h2>About me</h2>
+        <img src="/img/28.jpg" alt="Index page" style="width:128px;height:128px;">
+        <ul>
+        <li>Hi! My name is: Tom Jensen</li>
+        <li>My country of origin is: Ireland</li>
+        <li>My birth date is: 2/1/1971</li>
+        <li>My age is: 46 years</li>
+        <li>My e-mail address is: tom.jensen25@example.com</li>
 
-        <a href="img/giphy.gif"><img class="col-md-6 img-circle pad" src="img/giphy.gif" width="400" height="400" alt="Index page" alt="Cinque Terre""></a>
-
-   </div>
-
-
+        </ul>
     </main>
 
 <br><br><br><br><br><br>
 
-<footer>
-D&S Assignment 1- MSIS Program- Kelley School of Business- Indiana University - All rights reserved
-</footer>
+    <footer>
+    This is a page all about me
+    </footer>
 
 
 
