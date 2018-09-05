@@ -49,6 +49,11 @@ body{
             color: white;
         }
 
+        tfoot{
+           background-color: cadetblue;
+           color: white;
+        }
+
 
 
        .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
