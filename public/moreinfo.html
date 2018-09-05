@@ -9,12 +9,23 @@
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/tablesort.css" type="text/css">
 
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="js/tablesort.min.js"></script>
+    <script src='js/tablesort.number.min.js'></script>
+<script src='js/tablesort.date.min.js'></script>
+    <script src='js/tablesort.monthname.min.js'></script>
+<script src='js/tablesort.filesize.min.js'></script>
+<script src='js/tablesort.dotsep.min.js'></script>
+
+
 
   <link rel="stylesheet" href="css/hw1.css">
   <script>
@@ -60,7 +71,7 @@ function relocate_home()
 
         <div class="container">
             <h1>Places I'd like to visit</h1>
-    <table  class="table table-bordered table-hover table-condensed">
+    <table id="table-ish" class="table table-bordered table-hover table-condensed">
 
 
      <thead>
@@ -109,12 +120,14 @@ function relocate_home()
         <td>07/12/2018</td>
         </tr>
 
+<!--
 
 
         <tr  id="total">
             <td>BUDGET GRAND TOTAL</td>
             <td colspan="6">$30,000</td>
         </tr>
+-->
 
      </tbody>
 
@@ -176,7 +189,9 @@ function relocate_home()
 <br><br><br>
     </main>
 
-
+    <script>
+        new Tablesort(document.getElementById('table-ish'));
+    </script>
 
 </body>
 
