@@ -16,6 +16,7 @@
 </head>
 <body>
 
+
   <header>
 
 <div class="jumbotron pad">
@@ -42,7 +43,7 @@
 
 
 
-    <main>
+    <main id="dashboard">
 
    <h2>About me</h2>
 
@@ -57,7 +58,7 @@
   <tbody>
     <tr>
       <th scope="row">Name:</th>
-      <td>Tom Jensen</td>
+      <td>{{ name }}</td>
 
     </tr>
 
@@ -69,28 +70,31 @@
 
     <tr>
       <th scope="row">Country of origin:</th>
-      <td>Ireland</td>
+      <td>{{ country_of_origin }}</td>
     </tr>
 
     <tr>
       <th scope="row">Date of Birth:</th>
-      <td>02/01/1971</td>
+      <td>{{ dob }}</td>
     </tr>
 
     <tr>
       <th scope="row">Age:</th>
-      <td>46 years</td>
+      <td>{{ age_calc }}</td>
     </tr>
 
     <tr>
       <th scope="row">Email Address:</th>
-      <td><a href="mailto:tom.jensen25@example.com">tom.jensen25@example.com</a></a></td>
+      <td><a href="mailto:tom.jensen25@example.com">{{ email }}</a></td>
     </tr>
 
   </tbody>
 </table>
 
     </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/dashboard.app.js"></script>
 
 <br><br><br><br><br><br>
 
