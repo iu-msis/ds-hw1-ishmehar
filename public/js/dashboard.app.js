@@ -3,12 +3,11 @@ var dashboardapp = new Vue({
   data: {
 
 info: {
-   "name":{"title":'',"first":'',"last":''},
-   "pictures": '',
-   "location":{city:'',state:''},
-   "dob":{"date":''},
-   "email" : ''
-
+   name:{"title":'',"first":'',"last":''},
+   picture: {"thumbnail":''},
+   location:{city:'',state:''},
+   dob:{"date":''},
+   email: ''
 }
 },
 methods: {
@@ -39,9 +38,9 @@ created () {
  },
 computed: {
   age_calc: function() {
-    console.log('The issue is here:');
-    console.log('this.dob is:', this.dob);
-    console.log(this.info);
+    // console.log('The issue is here:');
+    // console.log('this.dob is:', this.dob);
+    // console.log(this.info);
 
      return moment().diff(moment(this.info.dob.date),'years')
 
