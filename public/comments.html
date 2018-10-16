@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+    <title>Bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/tablesort.css" type="text/css">
+      <link rel="stylesheet" href="css/hw1.css">
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="js/tablesort.min.js"></script>
+    <script src='js/tablesort.number.min.js'></script>
+<script src='js/tablesort.date.min.js'></script>
+    <script src='js/tablesort.monthname.min.js'></script>
+<script src='js/tablesort.filesize.min.js'></script>
+<script src='js/tablesort.dotsep.min.js'></script>
+
+</head>
+<body>
+  <header>
+
+<div class="jumbotron pad">
+  <h1>Write comments</h1>
+
+</div>
+
+     </header>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">This page tells you all about me!</a>
+</div>
+<ul class="nav navbar-nav">
+<li class="active"><a href="index.html">Index</a></li>
+<li><a href="aboutme.html">About me</a></li>
+<li><a href="moreinfo.html">More information</a></li>
+<li><a href="comment.html">Add comments</a></li>
+</ul>
+</div>
+</nav>
+
+
+    <main>
+
+
+<div class="commentsDiv">
+  <h2>Input your comments here</h2>
+  <form id="newCommentForm" @submit.prevent="pushComment">
+       <div class="form-group">
+      <label for="comments">Comment:</label>
+      <input type="comments" class="form-control" id="comment" placeholder="Enter comment" name="comments">
+    </div>
+      <button id="submitNewComment" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-th-list" action=""></span> Submit</button>
+  </form>
+
+  <table id="commentTable" class="table table-bordered table-hover table-condensed">
+   <thead>
+      <tr>
+      <th>ID</th>
+      <th>COMMENT</th>
+      </tr>
+  </thead>
+
+  <tbody id="commentTableBody" v-if="comments">
+      <tr v-for="comment in comments">
+      <td>{{comment.id}}</td>
+      <td>{{comment.comment}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+<br><br><br>
+    </main>
+
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/dashboard.app.js"></script>
+    <script>
+        new Tablesort(document.getElementById('commentTable'));
+    </script>
+
+</body>
+
+<footer>
+D&S Assignment 1- MSIS Program- Kelley School of Business- Indiana University - All rights reserved
+</footer>
+
+</html>

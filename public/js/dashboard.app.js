@@ -1,61 +1,41 @@
 var dashboardapp = new Vue({
-  el: '#dashboard',
+  el: '#commentsDiv',
   data: {
-
-info: {
-   name:{"title":'',"first":'',"last":''},
-   picture: {"thumbnail":''},
-   location:{city:'',state:''},
-   dob:{"date":''},
-   email: ''
-}
+    comments: [
+      {
+        id:'',
+        comments:''
+      }
+    ]
 },
 methods: {
-
-  pretty_finaldate: function(d) {
-    return moment(d).format('l')
-  },
-
-  pretty_age: function(d) {
-    return d;
-  },
-  fetchTasks () {
-
-     fetch('https://randomuser.me/api')
-
+  fetchComments () {
+     fetch('http://ec2-18-222-202-164.us-east-2.compute.amazonaws.com/api/comment.php/')
      .then( response => response.json() )
-     .then( json => {dashboardapp.info = json.results[0]; } )
+     .then( json => {this.comments = json} )
      .catch( err => {
        console.log('TASK FETCH ERROR:');
        console.log(err);
-
      });
-}},
+   },
+   pushComment() {
+     fetch('http://ec2-18-222-202-164.us-east-2.compute.amazonaws.com/api/comment.php/', {
+       method:"POST",
+       body:JSON.stringify({
+         comment:document.getElementById('comment').value
+       }),
+       headers: {
+         'Content-type':'application/json'
+       }
+     })
+     .then(resp => resp.json())
+     .then(response => console.log(response))
+     .catch(function(error){
+       console.log(error)
+     })
+   }
+},
 created () {
-
-      this.fetchTasks();
-
- },
-computed: {
-  age_calc: function() {
-    // console.log('The issue is here:');
-    // console.log('this.dob is:', this.dob);
-    // console.log(this.info);
-
-     return moment().diff(moment(this.info.dob.date),'years')
-
-
-},
-pretty_age: function() {
-  return this.pretty_age(this.age)
-
-},
-
-pretty_date: function() {
-
-  return this.pretty_date(this.pretty_finaldate)
-}
-
-}
-}
-)
+      this.fetchComments();
+    }
+})
